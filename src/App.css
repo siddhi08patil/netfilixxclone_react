@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#mainn{
+  background: linear-gradient(90deg, 
+  rgba(0, 0, 0, 1) 0%,          /* Pure black */
+  rgba(50, 35, 30, 0.8) 35%,   /* Dark brownish black */
+  rgba(40, 50, 75, 1) 68%,     /* Dark bluish black */
+  rgba(45, 10, 50, 1) 95%,     /* Dark purplish black */
+  rgba(10, 20, 20, 1) 100%     /* Dark greenish black */
+);
+position: relative;
+}  
+#alld{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+#btns{
+  margin-left: 600px;
+}
+#alld button{
+  height: 40px;
+  width: 80px;
+  margin-left: 50px;
+  margin-top: 25px;
+  background-color: rgba(45, 45, 45, 0.8);
+  color: white;
+  border-left: 0.5px solid white;
+  border-top: 0.5px solid white;
+  border-radius: 25px;
+}
+#alld button:hover{
+  background-color: aliceblue;
+  color: black;
+}
+#alld img{
+  height: 150px;
+  width: 300px;
+  margin-top: -20px;
+  margin-left: -50px;
+}
+#bar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  margin-left: 300px;
+  background-color: rgba(43, 42, 42, 0.8);
+  width: 600px;
+  height: 40px;
+  border-left: 0.5px solid white;
+  border-top: 0.5px solid white;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  z-index: 100; 
+}
+#bar p{
+  margin-left: 70px;
+  color: gray;
+  font-size: 17px;
+  transition: color 0.3s, font-weight 0.3s;
+}
+#bar p:hover {
+  color: white; /* Change text color to gray */
+  font-weight: bold; /* Make text bold */
+  cursor: pointer;
+}
+#backig1 {
+  background: linear-gradient(90deg, 
+    rgba(0, 0, 0, 1) 0%,          /* Pure black */
+    rgba(50, 35, 30, 0.8) 35%,   /* Dark brownish black */
+    rgba(40, 50, 75, 1) 68%,     /* Dark bluish black */
+    rgba(45, 10, 50, 1) 95%,     /* Dark purplish black */
+    rgba(10, 20, 20, 1) 100%     /* Dark greenish black */
+  );
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+#backig img {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-radius: 25px;
+  margin-left: 180px;
+  margin-top: 40px;
+  transition: filter 0.3s ease; /* Smooth blur effect */
+}
+
+/* On hover: apply blur and show text */
+#backig img:hover {
+  filter: blur(5px);
+}
+
+/* Text that appears on hover */
+#backig:hover::after {
+  content: "Ultimate TV Show and More";
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Correct centering */
+  color: red;
+  font-size: 53px;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none; /* Prevent text from being interactive */
+}
+#searchbar{
+  margin-top: -40px; 
+}
+#searchbar input{
+  height: 50px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0.5px solid white;
+  border-radius: 10px; 
+  margin-left: 340px;
+}
+#searchbar button{
+  height: 50px;
+  width: 200px;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  border-top: 0.5px solid white;
+  border-left: 0.5px solid white;
+  margin-left: 10px;
+}
+#doo p{
+  color: white;
+  font-size: 53px;
+  text-align: center;
+  margin-top: -10px;
+}
+#trendingpg{
+  margin-top: -36px;
+  background: linear-gradient(90deg, 
+  rgba(0, 0, 0, 1) 0%,          /* Pure black */
+  rgba(50, 35, 30, 0.8) 35%,   /* Dark brownish black */
+  rgba(40, 50, 75, 1) 68%,     /* Dark bluish black */
+  rgba(45, 10, 50, 1) 95%,     /* Dark purplish black */
+  rgba(10, 20, 20, 1) 100%     /* Dark greenish black */
+);
+position: relative;
+}
+#tdname{
+  color: white;
+  font-size: 53px;
+}
+#boxex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#box {
+  margin-left: 9px;
+}
+
+#box img {
+  border: 0.5px solid white;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;  /* Adds smooth transition for scaling */
+}
+
+#box img:hover {
+  transform: scale(1.1);  /* Makes the image 10% larger on hover */
+}
+#allshow{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+#indoo {
+  margin-left: 50px;
+  border: 1px solid white;
+  border-radius: 25px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  justify-content: center;
+  background: rgb(6, 2, 67);
+  background: linear-gradient(90deg, rgba(6, 2, 67, 1) 0%, rgba(35, 80, 5, 0.9305847338935574) 36%, rgba(60, 79, 145, 1) 68%, rgba(35, 80, 5, 1) 75%, rgba(6, 2, 67, 1) 100%);
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;  /* Smooth transition for background and bounce */
+}
+
+#indoo:hover {
+  transform: scale(1.1) translateY(-10px);  /* Bounce effect: makes the box slightly larger and moves it up */
+  background: rgb(35, 80, 5);  /* Change background color on hover */
+  background: linear-gradient(90deg, rgba(35, 80, 5, 1) 0%, rgba(6, 2, 67, 1) 36%, rgba(60, 79, 145, 1) 68%, rgba(35, 80, 5, 1) 75%, rgba(6, 2, 67, 1) 100%);
+}
+#allq{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+#td11{
+  background: linear-gradient(90deg, 
+  rgba(0, 0, 0, 1) 0%,          /* Pure black */
+  rgba(50, 35, 30, 0.8) 35%,   /* Dark brownish black */
+  rgba(40, 50, 75, 1) 68%,     /* Dark bluish black */
+  rgba(45, 10, 50, 1) 95%,     /* Dark purplish black */
+  rgba(10, 20, 20, 1) 100%     /* Dark greenish black */
+);
+position: relative;
+margin-top: -19.6px;
+}
+#td11 h2{
+  color: white;
+  text-align: center;
+}
+#sq {
+  margin-top: 20px;
+  background-color: rgb(56, 55, 55);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 700px;
+  height: 50px;
+  text-align: center;
+  margin-left: 250px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;  /* Smooth transitions for color and bounce */
+}
+
+#sq:hover {
+  background-color: lightgray;  /* Change background color to light gray on hover */
+  color: black;  /* Change text color to black on hover */
+  transform: scale(1.1);  /* Bounce effect: makes the box grow outward */
+}
+#td12{
+ background-color: rgb(30, 29, 29);
+position: relative;
+margin-top: 0px;
+}
+#policy {
+  display: flex;
+  flex-direction: row;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#p11 {
+  margin-left: 150px;
+  transition: text-decoration 0.3s ease, cursor 0.3s ease; /* Smooth transitions */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#p11:hover {
+  text-decoration: underline;  /* Underline the text on hover */
+  cursor: pointer;  /* Change cursor to pointer on hover */
 }
+
+
